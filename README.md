@@ -1,45 +1,45 @@
-usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
-           <command> [<args>]
+FERAMS - Facial Expression Recognition and Attendance Management System
 
-These are common Git commands used in various situations:
+## Introduction
+We have proposed an automated student attendance management system based on face recognition and facial expression recognition.
+Along with Attendance Management, Our System also provides some other important functionalities:
+1) Registration - The student who is not registered on system will also be able to register on the spot by seeking the administrative permission.
+2) Deletion – The Administration can remove Student data which may be corrupted in some way.
+3) Student List – The Administration can get the list of students marked as present along with the time.
 
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
+` The average accuracy of Facial Expression Recognition is 66 percent and Face Recognition using MTCNN is 95 percent.`
 
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
+## Key Contributions
+- #### Face Recognition
+1) Firstly, we detect the face of the person using MTCNN and then identify it using pre-trained model developed using our database.
+2) Then we go for further steps for taking the attendance to avoid the proxy.
 
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
+- #### Facial expression recognition
+1) Once face recognition is done, we predict the expressions of the user and check whether the user expressions has changed at least once or not.
+2) If the User expressions are changed, we continue the procedure.
 
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
+- #### Marking The Attendance
+1) Once above-mentioned procedures are completed successfully then marking of the attendance is done for the user. And we note down the time of entering the person and all details in a csv file that is saved in the system.
+2) We can use this file for future references and the process continues for other users.
 
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
+## Templates for Flask Web App–
+```
+a) Admin Dashboard
+b) Attendance Manager
+c) Admin Authentication
+d) Student Registration
+e) Student Deletion
+f) Student List
+```
 
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+## References
+- #### [Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/)
+- #### [CNN Tutorial](https://www.slideshare.net/Simplilearn/convolutional-neural-network-tutorial-cnn-how-cnn-works-deep-learning-tutorial-simplilearn)
+- #### [Dataset for Facial Expression Recognition (FER2013)](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/)
+- #### [MTCNN Documentation](https://pypi.org/project/mtcnn/)
+
+## Developers
+  - Akshay Jain
+  - Ashok Kumar
+  - Anand Kumar
+  - Guru Aakash G
